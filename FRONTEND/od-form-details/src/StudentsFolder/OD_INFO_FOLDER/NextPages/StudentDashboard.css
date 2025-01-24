@@ -1,0 +1,111 @@
+.container-nav-and-dashboard{
+    min-width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+    padding:0px;
+    margin:0px;
+}
+
+.container-nav-and-dashboard .container-nav-of-student{
+    min-width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+.application-form-container{
+    padding:10px;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.application-form-container p{
+    text-align:center;
+    font-size:1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
+}
+
+.form-details-box{
+    width:100%;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:20px 0px;
+
+}
+.form-details-box div{
+    width:65%;
+    /* border:1px solid red; */
+    box-sizing:border-box;
+    padding:10px;
+}
+
+.form-details-box div p{
+    font-size:18px;
+    font-weight:100;
+    text-align:left;
+    padding:10px 0px;
+}
+.form-details-box div input{
+    width:100%;
+    padding:8px;
+    box-sizing: border-box;
+    border:2px solid rgb(159, 159, 218);
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.multiple-col-container{
+    display:grid;
+    grid-template-columns:auto auto;
+}
+
+.form-details-box div textarea{
+    border:2px solid rgb(159, 159, 218);
+    outline: none;
+    padding:8px;
+    width:100%;
+    box-sizing:border-box;
+    resize:none;
+    min-height:20vh;
+}
+.req-field{
+    color:orangered;
+}
+.form-details-box div button{
+    outline: none;
+    padding:10px;
+    width:100%;
+    box-sizing:border-box;
+    background-color:rgb(131, 163, 113);
+    font-weight:bold;
+    border:none;
+    cursor: pointer;
+    border-radius:10px;
+    font-size:large;
+}
+div select{
+    width:100%;
+    padding:8px;
+    border:2px solid rgb(186, 186, 239);
+    outline:none;
+    border-radius:5px;
+    margin-top:5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+@media(max-width:600px){
+    .form-details-box div{
+        width:100%;
+    }
+}
+
+@media(max-width:400px){
+    .multiple-col-container{
+        display:grid;
+        grid-template-columns:auto;
+    }
+}

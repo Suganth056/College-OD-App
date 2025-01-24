@@ -1,0 +1,12 @@
+.go-to-home{
+    text-align:right; 
+    /* text-decoration: none; */
+    min-width:100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    /* border:1px solid black; */
+    padding:5px;
+    position: absolute;
+    right:0%;
+    
+}

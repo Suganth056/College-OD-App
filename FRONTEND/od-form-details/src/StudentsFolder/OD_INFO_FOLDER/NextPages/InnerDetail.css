@@ -1,0 +1,83 @@
+/* .innerDetail-component{
+    width:100%;
+    box-sizing: border-box;
+    padding:20px;
+}
+
+.inner-container{
+    display: flex;
+    gap:10px;
+    padding:20px 10px;
+}
+.date-format div{
+    display: flex;
+}
+
+.date-format div p{
+    padding:0px 0px 0px 10px;
+} */
+
+.innerDetail-component {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inner-container {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+  
+  .inner-container h4 {
+    font-size: 16px;
+    margin: 0 0 5px;
+    color: #333;
+  }
+  
+  .inner-container p {
+    font-size: 14px;
+    margin: 0;
+    color: #555;
+  }
+  
+  .date-format {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .date-format div {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+  
+  .date-format h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .date-format p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .date-format {
+      flex-direction: column;
+    }
+  
+    .date-format div {
+      margin-bottom: 10px;
+    }
+  }
+  

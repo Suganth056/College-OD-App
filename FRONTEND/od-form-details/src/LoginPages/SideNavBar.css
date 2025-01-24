@@ -1,0 +1,99 @@
+*{
+    padding:0;
+    margin:0px;
+    
+}
+
+:root{
+    --primary-bg: rgb(109, 164, 109);
+}
+
+.Side-Nav{
+    min-height:100vh;
+}
+.Side-Nav nav{
+    display: flex;
+    flex-direction: column;
+    /* padding:10px; */
+    width: max-content;
+    position:fixed;
+    top:45vh;
+    z-index:2;
+    gap:5px;
+}
+.Side-Nav nav .nav-nav-container{
+    display: flex;
+    padding:7px;
+
+}
+.Nav-container{
+    border:1px solid black;
+}
+
+.icon-class{
+    font-size:28px;
+    cursor:pointer;
+    color: black;
+}
+
+.menu-container{
+    background-color:var(--primary-bg);
+}
+.nav-text p{
+    padding:0px 2px;
+    cursor: pointer;
+    color: black;
+}
+.nav-text-off{
+    display:none;
+}
+
+.Login-list{
+    margin:0px;
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    /* width:fit-content; */
+    bottom:-82px;
+    left:87px;
+    border:1px solid rgb(13, 13, 13);
+    background-color:rgba(243, 233, 233, 0.759);
+    min-width:max-content;
+
+}
+.Login-list .item-list{
+    color:black;
+    padding:2px 4px;
+    text-decoration: none;
+
+}
+.Login-hoverlist{
+   display:none; 
+   
+}
+
+.Login-hover-on{
+    display:flex;
+}
+
+.item-list:hover{
+    background-color:var(--primary-bg);
+}
+
+
+
+/*  */
+
+@media(max-width:400px){
+    .Side-Nav nav{
+        display: flex;
+        flex-direction: column;
+        /* padding:10px; */
+        width: max-content;
+        position:fixed;
+        top:6vh;
+        z-index:2;
+        gap:5px;
+    }
+}

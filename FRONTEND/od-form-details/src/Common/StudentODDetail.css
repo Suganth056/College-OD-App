@@ -1,0 +1,25 @@
+.input-bar{
+    padding:8px;
+    width:95%;
+    align-items:center;
+    resize:none;
+    min-height:10vh;
+    border:2px solid rgb(196, 187, 187);
+}
+
+.btn-submit{
+    /* width:100%; */
+    box-sizing: border-box;
+    padding:10px;
+    align-self: center;
+    cursor: pointer;
+    background-color: rgb(132, 181, 132);
+    outline: none;
+    border: none;
+    font-weight: bold;
+    
+}
+/* 
+@media(max-width:500px){
+    
+} */

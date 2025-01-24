@@ -1,0 +1,114 @@
+*{
+    /* width:100%; */
+    max-width:100%;
+    padding:0px;
+    margin:0px;
+}
+
+.SignUp-container{
+    text-align:center;
+}
+
+.SignUp-container .pers-det{
+    text-align:left;
+    padding: 10px;
+    color:rgb(247, 23, 3);
+    font-size:18px;
+
+}
+
+.signup-outline-container{
+    width:100%;
+    max-width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.signup-outline-container .signup-inline-container{
+    /* border:1px solid black; */
+    width:50%;
+    max-width:50%;
+}
+
+.signup-inline-container div{
+    display:flex;
+    flex-direction: column;
+    min-width:100%;
+    max-width:100%;
+    margin:15px 0px;
+}
+
+.signup-inline-container div .labelText{
+    text-align:left;
+    color:rgb(27, 26, 26);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:200;
+}
+
+.signup-inline-container div .labelText .requiredSymbol{
+    color:rgb(255, 89, 0);
+    font-size:20px;
+}
+
+.signup-inline-container div input{
+    padding:8px;
+    border:2px solid rgb(186, 186, 239);
+    outline:none;
+    border-radius:5px;
+    margin:5px 0px;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.signup-inline-container div button{
+    padding:10px;
+    background-color:rgb(213, 99, 58);
+    border:none;
+    outline:none;
+    font-size:15px;
+    width:max-content;
+    color:white;
+    border-radius:10px;
+    cursor: pointer;
+}
+.btn-submit-container{
+    display: flex;
+    justify-content:center;
+    width:100%;
+    align-items: center;
+
+}
+
+.signup-inline-container div select{
+    padding:8px;
+    border:2px solid rgb(186, 186, 239);
+    outline:none;
+    border-radius:5px;
+    margin-top:5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.signup-inline-container div textarea{
+    padding:8px;
+    min-height:60px;
+    resize: none;
+    margin-top:5px;
+    border:2px solid rgb(186, 186, 239);
+    outline:none;
+    border-radius:5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+@media (max-width:800px){
+    .signup-outline-container .signup-inline-container{
+        /* border:1px solid black; */
+        width:90%;
+        max-width:90%;
+    }
+}

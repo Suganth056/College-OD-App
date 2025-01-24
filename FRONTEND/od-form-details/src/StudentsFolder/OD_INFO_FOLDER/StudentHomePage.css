@@ -1,0 +1,42 @@
+.Student-home{
+    /* border:1px solid red; */
+    background-color:rgb(109, 164, 109);
+    
+}
+
+.Student-home nav{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    /* border:1px solid red; */
+
+
+}
+
+.link-tag-for-stud{
+    box-sizing: border-box;
+    padding:10px;
+    text-decoration: none;
+    color: black;
+    width:100%;
+    text-align: center;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.link-tag-for-stud.active{
+    background-color:rgb(138, 198, 138);
+}
+
+
+@media(max-width:400px){
+    .link-tag-for-stud{
+        box-sizing: border-box;
+        padding:8px;
+        text-decoration: none;
+        color: black;
+        width:100%;
+        text-align: center;
+        font-size:14px;
+        font-weight:bold;
+    }
+}
