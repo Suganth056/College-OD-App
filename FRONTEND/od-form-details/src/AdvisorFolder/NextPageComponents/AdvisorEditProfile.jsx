@@ -17,6 +17,7 @@ const AdvisorEditProfile = () => {
   const [advisor_Email,setUEmail]=useState((user_detail.Email?user_detail.Email:""));
   const [advisorDept,setDept]=useState((user_detail.DEPT?user_detail.DEPT:""));
   const [advisorGender,setU_Gender]=useState((user_detail.Gender?user_detail.Gender:""));
+  const [advisorYear,setYear]=useState((user_detail.YearOfAdvisor?user_detail.YearOfAdvisor:""));
   const [advisorPh_no,setPh_No]=useState((user_detail.phone_num?user_detail.phone_num:""));
   const [advisorDob,setDOB]=useState((user_detail.dob?Calender(user_detail.dob):""));
   const [advisorAddress,setU_Address]=useState((user_detail.address?user_detail.address:""));
