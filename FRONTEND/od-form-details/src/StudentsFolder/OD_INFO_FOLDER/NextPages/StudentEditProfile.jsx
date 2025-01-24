@@ -13,19 +13,19 @@ const StudentEditProfile = () => {
 
   const dispatch=useDispatch();
 
-  const [ufname,setFname]=useState(user_detail.StudentName);
-  const [ulname,setLname]=useState(user_detail.StudentLastName);
-  const [uId,setU_ID]=useState(user_detail.Student_ID_NUM);
-  const [uReg_no,setRegNo]=useState(user_detail.RegisterNum);
-  const [uEmail,setUEmail]=useState(user_detail.Email)
-  const [udept,setDept]=useState(user_detail.DEPT);
+  const [ufname,setFname]=useState((user_detail.StudentName?user_detail.StudentName:""));
+  const [ulname,setLname]=useState((user_detail.StudentLastName?user_detail.StudentLastName:""));
+  const [uId,setU_ID]=useState((user_detail.Student_ID_NUM?user_detail.Student_ID_NUM:""));
+  const [uReg_no,setRegNo]=useState((user_detail.RegisterNum?user_detail.RegisterNum:""));
+  const [uEmail,setUEmail]=useState((user_detail.Email?user_detail.Email:""))
+  const [udept,setDept]=useState((user_detail.DEPT?user_detail.DEPT:""));
   const [uregulation,setRegulation]=useState(user_detail.Regulation)
-  const [uAcademicYear,setYear]=useState(user_detail.YearOfStudying);
-  const [uGender,setU_Gender]=useState(user_detail.Gender);
-  const [uPh_no,setPh_No]=useState(user_detail.phone_num);
-  const [uDob,setDOB]=useState(formatDate(user_detail.dob))
-  const [uAddress,setU_Address]=useState(user_detail.address)
-  const [uPwd,setU_Pwd]=useState(user_detail.pwd)
+  const [uAcademicYear,setYear]=useState((user_detail.YearOfStudying?user_detail.YearOfStudying:""));
+  const [uGender,setU_Gender]=useState((user_detail.Gender?user_detail.Gender:"Select"));
+  const [uPh_no,setPh_No]=useState((user_detail.phone_num?user_detail.phone_num:""));
+  const [uDob,setDOB]=useState((user_detail.dob?formatDate(user_detail.dob):""))
+  const [uAddress,setU_Address]=useState((user_detail.address?user_detail.address:""))
+  const [uPwd,setU_Pwd]=useState((user_detail.pwd?user_detail.pwd:""))
 
   const [editable,setEdit]=useState(false);
 

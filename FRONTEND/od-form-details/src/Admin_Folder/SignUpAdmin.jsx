@@ -117,7 +117,7 @@ const SignUpAdmin = () => {
                     <div>
                         <p className='labelText'>ID Number <span className='requiredSymbol'>*</span></p>
                         <input
-                        type="number" 
+                        type="text" 
                         required
                         onChange={(e)=>setU_ID((Number)(e.target.value))}
                         />
@@ -132,17 +132,17 @@ const SignUpAdmin = () => {
                     </div>
                     <div>
                         <p className='labelText'>Gender <span className='requiredSymbol'>*</span></p>
-                        <select name="" id="year" onChange={(e)=>setU_Gender(e.target.value)}>
+                        <select name="" id="gender" onChange={(e)=>setU_Gender(e.target.value)}>
                                     <option value="">Select</option>
-                                    <option value="I">Male</option>
-                                    <option value="II">Female</option>
-                                    <option value="III">Others</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
                         </select>
                     </div>
                     <div>
                         <p className='labelText'>Phone Number <span className='requiredSymbol'>*</span></p>
                         <input 
-                        type="number" 
+                        type="text" 
                         required
                         onChange={(e)=>setPh_No(e.target.value)}
                         />

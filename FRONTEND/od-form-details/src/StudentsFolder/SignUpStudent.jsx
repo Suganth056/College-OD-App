@@ -11,8 +11,8 @@ const SignUpStudent = () => {
     const [student_Id,setU_ID]=useState('')
     const [student_roll_num,setStudentRoll]=useState('')
     const [student_Email,setUEmail]=useState('')
-    const [studentDept,setDept]=useState('CSE');
-    const [studentYear,setYear]=useState('I');
+    const [studentDept,setDept]=useState('');
+    const [studentYear,setYear]=useState('');
     const [regulation,setRegulation]=useState('');
     const [studentGender,setU_Gender]=useState('Male')
     const [studentPh_no,setPh_No]=useState('')
@@ -130,7 +130,7 @@ const SignUpStudent = () => {
               <div>
                   <p className='labelText'>Student ID Number <span className='requiredSymbol'>*</span></p>
                   <input 
-                  type="number" 
+                  type="text" 
                   required
                   value={student_Id}
                   onChange={(e)=>setU_ID((Number)(e.target.value))}
@@ -139,7 +139,7 @@ const SignUpStudent = () => {
               <div>
                   <p className='labelText'>Register Number <span className='requiredSymbol'>*</span></p>
                   <input 
-                  type="number" 
+                  type="text" 
                   required
                   value={student_roll_num}
                   onChange={(e)=>setStudentRoll((Number)(e.target.value))}
@@ -182,15 +182,15 @@ const SignUpStudent = () => {
                   <p className='labelText'>Gender <span className='requiredSymbol'>*</span></p>
                   <select name="" id="gender" value={studentGender} onChange={(e)=>setU_Gender(e.target.value)}>
                     <option value="">Select</option>
-                    <option value="I">Male</option>
-                    <option value="II">Female</option>
-                    <option value="III">Others</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
                   </select>
                 </div>
                 <div>
                   <p className='labelText'>Phone Number <span className='requiredSymbol'>*</span></p>
                   <input 
-                  type="number" 
+                  type="text" 
                   required
                   value={studentPh_no}
                   onChange={(e)=>setPh_No((Number)(e.target.value))}

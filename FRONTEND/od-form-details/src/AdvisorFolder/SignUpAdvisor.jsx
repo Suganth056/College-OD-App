@@ -117,7 +117,7 @@ const SignUpAdvisor = () => {
                     <div>
                         <p className='labelText'>ID Number <span className='requiredSymbol'>*</span></p>
                         <input 
-                        type="number" 
+                        type="text" 
                         required
                         value={advisor_Id}
                         onChange={(e)=>setU_ID((Number)(e.target.value))}
@@ -160,9 +160,9 @@ const SignUpAdvisor = () => {
                         <p className='labelText'>Gender <span className='requiredSymbol'>*</span></p>
                         <select name="" id="gender" value={advisorGender} onChange={(e)=>setU_Gender(e.target.value)}>
                                     <option value="">Select</option>
-                                    <option value="I">Male</option>
-                                    <option value="II">Female</option>
-                                    <option value="III">Others</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
                         </select>
                     </div>
                     <div>

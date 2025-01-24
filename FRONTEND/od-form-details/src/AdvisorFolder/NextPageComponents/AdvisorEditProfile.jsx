@@ -11,17 +11,16 @@ const AdvisorEditProfile = () => {
   const user_detail=useSelector((state)=> state.UserName.obj);
   console.log("user Detail",user_detail);
 
-  const [advisor_fname,setFname]=useState(user_detail.AdvisorName);
-  const [advisor_lname,setLname]=useState(user_detail.AdvisorLastName);
-  const [advisor_Id,setU_ID]=useState(user_detail.Advisor_ID_NUM);
-  const [advisor_Email,setUEmail]=useState(user_detail.Email);
-  const [advisorDept,setDept]=useState(user_detail.DEPT);
-  const [advisorYear,setYear]=useState(user_detail.YearOfAdvisor);
-  const [advisorGender,setU_Gender]=useState(user_detail.Gender);
-  const [advisorPh_no,setPh_No]=useState(user_detail.phone_num);
-  const [advisorDob,setDOB]=useState(Calender(user_detail.dob));
-  const [advisorAddress,setU_Address]=useState(user_detail.address);
-  const [advisorPwd,setU_Pwd]=useState(user_detail.pwd);
+  const [advisor_fname,setFname]=useState((user_detail.AdvisorName?user_detail.AdvisorName:""));
+  const [advisor_lname,setLname]=useState((user_detail.AdvisorLastName?user_detail.AdvisorLastName:""));
+  const [advisor_Id,setU_ID]=useState((user_detail.Advisor_ID_NUM?user_detail.Advisor_ID_NUM:""));
+  const [advisor_Email,setUEmail]=useState((user_detail.Email?user_detail.Email:""));
+  const [advisorDept,setDept]=useState((user_detail.DEPT?user_detail.DEPT:""));
+  const [advisorGender,setU_Gender]=useState((user_detail.Gender?user_detail.Gender:""));
+  const [advisorPh_no,setPh_No]=useState((user_detail.phone_num?user_detail.phone_num:""));
+  const [advisorDob,setDOB]=useState((user_detail.dob?Calender(user_detail.dob):""));
+  const [advisorAddress,setU_Address]=useState((user_detail.address?user_detail.address:""));
+  const [advisorPwd,setU_Pwd]=useState((user_detail.pwd?user_detail.pwd:""));
 
   const [editable,setEdit]=useState(false);
   const dispatch=useDispatch();

@@ -11,15 +11,15 @@ const PrincipalEditProfile = () => {
   let user_detail=useSelector((state)=> state.UserName.obj);
   console.log("user Detail",user_detail);
 
-  const [principal_fname,setFname]=useState(user_detail.PrincipalName);
-  const [principal_lname,setLname]=useState(user_detail.PrincipalLastName);
-  const [principal_Id,setU_ID]=useState(user_detail.Principal_ID_NUM);
-  const [principal_Email,setUEmail]=useState(user_detail.Email);
-  const [principalGender,setU_Gender]=useState(user_detail.Gender);
-  const [principalPh_no,setPh_No]=useState(user_detail.phone_num);
-  const [principalDob,setDOB]=useState(Calender(user_detail.dob));
-  const [principalAddress,setU_Address]=useState(user_detail.address);
-  const [principalPwd,setU_Pwd]=useState(user_detail.pwd);
+  const [principal_fname,setFname]=useState((user_detail.PrincipalName?user_detail.PrincipalName:""));
+  const [principal_lname,setLname]=useState((user_detail.PrincipalLastName?user_detail.PrincipalLastName:""));
+  const [principal_Id,setU_ID]=useState((user_detail.Principal_ID_NUM?user_detail.Principal_ID_NUM:""));
+  const [principal_Email,setUEmail]=useState((user_detail.Email?user_detail.Email:""));
+  const [principalGender,setU_Gender]=useState((user_detail.Gender?user_detail.Gender:""));
+  const [principalPh_no,setPh_No]=useState((user_detail.phone_num?user_detail.phone_num:""));
+  const [principalDob,setDOB]=useState(user_detail.dob?Calender(user_detail.dob):"");
+  const [principalAddress,setU_Address]=useState((user_detail.address?user_detail.address:""));
+  const [principalPwd,setU_Pwd]=useState((user_detail.pwd?user_detail.pwd:""));
 
   const [editable,setEdit]=useState(false);
   const dispatch=useDispatch();

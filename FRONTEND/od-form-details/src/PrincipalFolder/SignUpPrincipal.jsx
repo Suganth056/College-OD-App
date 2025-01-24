@@ -128,9 +128,9 @@ const SignUpPrincipal = () => {
                   <p className='labelText'>Gender <span className='requiredSymbol'>*</span></p>
                   <select name="" id="year" required value={principalGender} onChange={(e)=>setU_Gender(e.target.value)}>
                             <option value="">Select</option>
-                            <option value="I">Male</option>
-                            <option value="II">Female</option>
-                            <option value="III">Others</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
                   </select>
               </div>
               <div>

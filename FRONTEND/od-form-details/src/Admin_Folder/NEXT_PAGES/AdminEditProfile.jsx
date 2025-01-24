@@ -13,15 +13,15 @@ const AdminEditProfile = () => {
         const user_detail=useSelector((state)=> state.UserName.obj);
         const dispatch=useDispatch();
 
-        const [ufname,setFname]=useState(user_detail.AdminName);
-        const [ulname,setLname]=useState(user_detail.AdminLastName);
-        const [uId,setU_ID]=useState(user_detail.ID_NUM);
-        const [uEmail,setUEmail]=useState(user_detail.email)
-        const [uGender,setU_Gender]=useState(user_detail.Gender)
-        const [uPh_no,setPh_No]=useState(user_detail.phone_num)
-        const [uDob,setDOB]=useState(Calender(user_detail.dob))
-        const [uAddress,setU_Address]=useState(user_detail.address)
-        const [uPwd,setU_Pwd]=useState(user_detail.pwd)
+        const [ufname,setFname]=useState((user_detail.AdminName?user_detail.AdminName:""));
+        const [ulname,setLname]=useState((user_detail.AdminLastName?user_detail.AdminLastName:""));
+        const [uId,setU_ID]=useState((user_detail.ID_NUM?user_detail.ID_NUM:""));
+        const [uEmail,setUEmail]=useState((user_detail.email?user_detail.email:""))
+        const [uGender,setU_Gender]=useState((user_detail.Gender?user_detail.Gender:""))
+        const [uPh_no,setPh_No]=useState((user_detail.phone_num?user_detail.phone_num:""))
+        const [uDob,setDOB]=useState((user_detail.dob?Calender(user_detail.dob):""))
+        const [uAddress,setU_Address]=useState((user_detail.address?user_detail.address:""))
+        const [uPwd,setU_Pwd]=useState((user_detail.pwd?user_detail.pwd:""))
 
         const [editable,setEdit]=useState(false);
 
@@ -133,15 +133,15 @@ const AdminEditProfile = () => {
                         <p className='labelText'>Gender <span className='requiredSymbol'>*</span></p>
                         <select name="" id="year" value={uGender}  onChange={(e)=>setU_Gender(e.target.value)}>
                                     <option value="">Select</option>
-                                    <option value="I">Male</option>
-                                    <option value="II">Female</option>
-                                    <option value="III">Others</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
                         </select>
                     </div>
                     <div>
                         <p className='labelText'>Phone Number <span className='requiredSymbol'>*</span></p>
                         <input 
-                        type="number" 
+                        type="text" 
                         className='edit-content'
                         required
                         readOnly

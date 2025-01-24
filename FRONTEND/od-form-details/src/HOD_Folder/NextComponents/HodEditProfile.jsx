@@ -10,16 +10,16 @@ const HodEditProfile = () => {
 
     let user_detail=useSelector((state)=> state.UserName.obj);
 
-    const [hod_fname,setFname]=useState(user_detail.HODName);
-    const [hod_lname,setLname]=useState(user_detail.HODLastName);
-    const [hod_Id,setU_ID]=useState(user_detail.HOD_ID_NUM);
-    const [hod_Email,setUEmail]=useState(user_detail.Email);
-    const [hodDept,setDept]=useState(user_detail.Dept);
-    const [hodGender,setU_Gender]=useState(user_detail.Gender);
-    const [hodPh_no,setPh_No]=useState(user_detail.phone_num);
-    const [hodDob,setDOB]=useState(Calender(user_detail.dob));
-    const [hodAddress,setU_Address]=useState(user_detail.address);
-    const [hodPwd,setU_Pwd]=useState(user_detail.pwd);
+    const [hod_fname,setFname]=useState((user_detail.HODName?user_detail.HODName:""));
+    const [hod_lname,setLname]=useState((user_detail.HODLastName?user_detail.HODLastName:""));
+    const [hod_Id,setU_ID]=useState((user_detail.HOD_ID_NUM?user_detail.HOD_ID_NUM:""));
+    const [hod_Email,setUEmail]=useState((user_detail.Email?user_detail.Email:""));
+    const [hodDept,setDept]=useState((user_detail.Dept?user_detail.Dept:""));
+    const [hodGender,setU_Gender]=useState((user_detail.Gender?user_detail.Gender:""));
+    const [hodPh_no,setPh_No]=useState((user_detail.phone_num?user_detail.phone_num:""));
+    const [hodDob,setDOB]=useState(user_detail.dob?Calender(user_detail.dob):"");
+    const [hodAddress,setU_Address]=useState((user_detail.address?user_detail.address:""));
+    const [hodPwd,setU_Pwd]=useState((user_detail.pwd?user_detail.pwd:""));
 
     const [editable,setEdit]=useState(false);
     const dispatch=useDispatch();
