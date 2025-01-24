@@ -19,14 +19,20 @@ app.use('/advisor',advisorRouter);
 app.use('/hod',hodRouter);
 app.use('/principal',principalRouter);
 
-
 const db=mysql.createConnection({
-    host:"localhost",
-    user:'root',
-    password:'lionel30',
-    database:'odDatabase'
+    host:"bsu4rvus5qbmd89ahfd8-mysql.services.clever-cloud.com",
+    user:'un7gknu0mqisuj9r',
+    password:'m9Z3OhlhE6KBZMeBEWmu',
+    database:'bsu4rvus5qbmd89ahfd8'
 })
 
+db.connect((err)=>{
+    if(err){
+        console.log("Error in connecting",err);
+        return;
+    }
+    console.log("My sql connected");
+})
 
 // app.use('/student-entry-data',require('./admin_Folder/adminWorks'));
 
