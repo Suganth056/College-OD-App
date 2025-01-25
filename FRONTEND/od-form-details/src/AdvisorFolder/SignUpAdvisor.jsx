@@ -25,9 +25,9 @@ const SignUpAdvisor = () => {
         e.preventDefault();
         try{
             const response=await axios.get(`${BASE_URL}/advisor`).then(res => res);
-            console.log(response)
+
             setDetail(response.data);
-            console.log(advisorDetail,"----");
+            
         }
         catch(err){
             console.log(err,"ERROR____")
@@ -38,7 +38,6 @@ const SignUpAdvisor = () => {
     const postData=async(obj)=>{
         try{
             const response=await axios.put(`${BASE_URL}/advisor/postData`,obj).then(res => res);
-            console.log(response);
             nav('/advisorlogin');
             
         }

@@ -19,7 +19,7 @@ const HodDashboard = () => {
   const fetchData=async()=>{
     try{
       const response=await axios.post(`${BASE_URL}/hod/get-od-data`,{user_id}).then(res => res);
-      console.log(response);
+
       setData(response.data);
     }
     catch(err){
@@ -28,12 +28,12 @@ const HodDashboard = () => {
   }
 
   const nextPage=(data)=>{
-      console.log(data);
+
       dispatch(modifydetail_obj(data));
       nav('/hod-dashboard/dashboard/innerDetail')
     }
     const deleteEntry=async(data)=>{
-      console.log(" Entry",data);
+      // console.log(" Entry",data);
         try{
           const deleteResponse=await axios.delete(`${BASE_URL}/hod/delete-req-data`,{data}).then(res => res);
           console.log("Delete Response",deleteResponse);
@@ -49,7 +49,7 @@ const HodDashboard = () => {
       console.log(data);
       try{
         const response=await axios.put(`${BASE_URL}/student/update-status`,data).then(res => res);
-        console.log(response);
+        // console.log(response);
         await deleteEntry(data);
         // console.log("delete")
       }
@@ -67,13 +67,13 @@ const HodDashboard = () => {
       let principal_id_num;
       try{
           const principalData=await axios.get(`${BASE_URL}/principal/`).then(res => res);
-          console.log(principalData);
+          // console.log(principalData);
           principal_id_num=principalData.data[0].Principal_ID_NUM;
-          console.log(principal_id_num)
+          // console.log(principal_id_num)
           const postResponse=await axios.post(`${BASE_URL}/principal/post-od-data`,{data,principal_id_num}).then(res => res);
-          console.log(postResponse,"HOD kita pass aanathu");
+          // console.log(postResponse,"HOD kita pass aanathu");
           const response=await axios.put(`${BASE_URL}/student/update-count`,obj).then(res => res);
-          console.log(response);
+          // console.log(response);
           deleteEntry(data)
         
       }

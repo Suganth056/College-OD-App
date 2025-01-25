@@ -24,9 +24,8 @@ const SignUpHOD = () => {
         e.preventDefault();
         try{
             const response=await axios.get(`${BASE_URL}/hod`).then(res => res);
-            console.log(response)
             setDetail(response.data);
-            console.log(hodDetail,"----");
+
         }
         catch(err){
             console.log(err,"ERROR____");
@@ -37,7 +36,7 @@ const SignUpHOD = () => {
     const postData=async(obj)=>{
         try{
             const response=await axios.put(`${BASE_URL}/hod/postData`,obj).then(res => res);
-            console.log(response);
+            // console.log(response);
             nav('/hodlogin');
             
         }

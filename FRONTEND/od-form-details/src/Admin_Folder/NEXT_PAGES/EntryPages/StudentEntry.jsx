@@ -12,7 +12,6 @@ const StudentEntry = () => {
   const postData=async()=>{
     try{
       const res=await axios.post(`${BASE_URL}/student-entry`,{studentID}).then(res => res);
-      console.log(res)
 
       if(res.status === 200){
         let text=document.querySelector('.blinking-text-container');

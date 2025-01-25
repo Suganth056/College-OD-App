@@ -18,7 +18,6 @@ const AdvisorLogin = () => {
     const fetchData=async()=>{
         try{
             const response=await axios.get(`${BASE_URL}/advisor`).then(res => res);
-            console.log(response);
             setData(response.data);
         }
         catch(err){
@@ -37,7 +36,7 @@ const AdvisorLogin = () => {
         if(advisorData.length){
             for(let i=0;i<advisorData.length;i++){
                 if((advisorData[i].Advisor_ID_NUM === advisor_ID) && (advisorData[i].pwd === advisor_pwd)){
-                    console.log("password Matches at",i);
+                    // console.log("password Matches at",i);
                     flag=true;
                     dispatch(modifyObj(advisorData[i]));
                     dispatch(modifyName(advisorData[i].AdvisorName));

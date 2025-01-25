@@ -9,7 +9,6 @@ import { modifyName, modifyObj, modifyUID } from '../../features_Redux/userName'
 const AdvisorEditProfile = () => {
 
   const user_detail=useSelector((state)=> state.UserName.obj);
-  console.log("user Detail",user_detail);
 
   const [advisor_fname,setFname]=useState((user_detail.AdvisorName?user_detail.AdvisorName:""));
   const [advisor_lname,setLname]=useState((user_detail.AdvisorLastName?user_detail.AdvisorLastName:""));
@@ -53,7 +52,6 @@ const AdvisorEditProfile = () => {
     if(editable){
         try{
           const response=await axios.put(`${BASE_URL}/advisor/postData`,obj).then(res => res);
-          console.log(response);
           alert("Updated Successfully");
           dispatch(modifyObj({
               AdvisorName:advisor_fname,

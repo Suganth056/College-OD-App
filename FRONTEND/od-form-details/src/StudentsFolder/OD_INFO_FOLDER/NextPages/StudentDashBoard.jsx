@@ -37,14 +37,14 @@ const StudentDashBoard = () => {
         uuidv4:uuidv4()
         
       }
-      console.log(obj);
+
       let res=await (user_id===obj.student_id?true:false);
-      console.log(res)
+
       if(res){
         try{
         
           const response=await axios.post(`${BASE_URL}/student/postodData`,obj).then(res => res);
-          console.log(response)
+
           alert("updated successfully");
         }
         catch(err){

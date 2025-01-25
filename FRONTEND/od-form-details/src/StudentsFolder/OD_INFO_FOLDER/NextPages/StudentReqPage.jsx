@@ -39,14 +39,14 @@ const StudentReqPage = () => {
     },[arr])
 
     const linkHandler=(data)=>{
-        console.log("Data From ----",data);
+
         dispatch(modifydetail_obj(data));
         nav('/student-dashboard/od-req-det/inner');
     }
 
     const deleteData=async(data)=>{
         try{
-            console.log(",_____data_____",data)
+
             let newData=await {id:data.student_uuid};
             const deleteResponse=await axios.delete(`${BASE_URL}/student/deleteReq`,{ data: newData }).then(res=>res);
             console.log(deleteResponse);

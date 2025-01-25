@@ -23,7 +23,7 @@ const SignUpPrincipal = () => {
         e.preventDefault();
         try{
             const response=await axios.get(`${BASE_URL}/principal`).then(res => res);
-            console.log(response)
+
             setDetail(response.data);
             console.log(principalDetail,"----");
         }
@@ -34,11 +34,11 @@ const SignUpPrincipal = () => {
     }
 
     const postData=async(obj)=>{
-        console.log(obj)
+
         console.log("Posted")
         try{
             const response=await axios.put(`${BASE_URL}/principal/postData`,obj).then(res => res);
-            console.log(response);
+
             nav('/principallogin')
         }
         catch(err){

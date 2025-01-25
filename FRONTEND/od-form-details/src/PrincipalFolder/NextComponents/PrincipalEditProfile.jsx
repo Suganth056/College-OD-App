@@ -9,7 +9,7 @@ import { modifyName, modifyObj, modifyUID } from '../../features_Redux/userName'
 const PrincipalEditProfile = () => {
 
   let user_detail=useSelector((state)=> state.UserName.obj);
-  console.log("user Detail",user_detail);
+
 
   const [principal_fname,setFname]=useState((user_detail.PrincipalName?user_detail.PrincipalName:""));
   const [principal_lname,setLname]=useState((user_detail.PrincipalLastName?user_detail.PrincipalLastName:""));
@@ -39,9 +39,9 @@ const PrincipalEditProfile = () => {
   }
     if(editable){
         try{
-          console.log("OBJJJJJJJJJJ",obj)
+
           const response=await axios.put(`${BASE_URL}/principal/postData`,obj).then(res => res);
-          console.log(response);
+
           alert("Updated Successfully");
           dispatch(modifyObj({
             PrincipalName:principal_fname,

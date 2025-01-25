@@ -9,7 +9,7 @@ const StudentODDetail = () => {
 
   const [remarks,setRemarks]=useState('');
   const data=useSelector((state)=>state.UserName.detail_obj);
-  console.log(data,"Redux");
+ 
   const formatDate=(date_field)=>{
     const date = new Date(date_field);
     const formattedDate = `${String(date.getDate()).padStart(2, '0')}-${String(date.getMonth() + 1).padStart(2, '0')}-${date.getFullYear()}`;
@@ -24,7 +24,7 @@ const StudentODDetail = () => {
     }
     try{
       const response=await axios.put(`${BASE_URL}/student/post-remarks`,obj).then(res => res)
-      console.log(response);
+
     }
     catch(err){
       console.log(err)

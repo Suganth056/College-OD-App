@@ -17,7 +17,7 @@ const LoginStudent = () => {
     const fetchData=async()=>{
         try{
             const response=await axios.get(`${BASE_URL}/student`).then(res => res);
-            console.log(response);
+
             setStudentData(response.data);
         }
         catch(err){

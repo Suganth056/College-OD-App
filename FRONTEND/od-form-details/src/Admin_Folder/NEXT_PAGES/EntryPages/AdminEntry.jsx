@@ -9,7 +9,6 @@ const AdminEntry = () => {
   const postData=async()=>{
     try{
       const res=await axios.post(`${BASE_URL}/admin-entry`,{adminID}).then(res => res);
-      console.log(res)
 
       if(res.status === 200){
         let text=document.querySelector('.blinking-text-container');

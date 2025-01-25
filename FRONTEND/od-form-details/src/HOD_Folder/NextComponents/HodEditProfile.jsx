@@ -40,9 +40,9 @@ const HodEditProfile = () => {
     }
       if(editable){
           try{
-            console.log("OBJJJJJJJJJJ",obj)
+
             const response=await axios.put(`${BASE_URL}/hod/postData`,obj).then(res => res);
-            console.log(response);
+
             alert("Updated Successfully");
             dispatch(modifyObj({
               HODName:hod_fname,

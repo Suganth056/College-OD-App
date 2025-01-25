@@ -50,8 +50,7 @@ const SignUpAdmin = () => {
     useEffect(()=>{
         console.log(admindata);
         for(let i=0;i<admindata.length;i++){
-            console.log(admindata[i].ID_NUM)
-            console.log(uId,typeof(uId),"  ok  kanmani",admindata[i].ID_NUM,typeof(admindata[i].ID_NUM))
+            
 
             if(((admindata[i].ID_NUM) === uId)){
                 console.log("Loop True")

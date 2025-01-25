@@ -23,7 +23,6 @@ const AdvisorDashboard = () => {
     let obj={id_num:user_id}
     try{
       const response=await axios.post(`${BASE_URL}/advisor/odData`,obj).then(res => res);
-      console.log("____res_____",response);
       setDetail(response.data);
     }
     catch(err) {
@@ -45,7 +44,6 @@ useEffect(()=>{
     console.log(" Entry",data);
       try{
         const deleteResponse=await axios.delete(`${BASE_URL}/advisor/delete-entry`,{data}).then(res => res);
-        console.log("Delete Response",deleteResponse);
         fetchData(user_id);
       }
       catch(err){
@@ -58,7 +56,6 @@ useEffect(()=>{
     console.log(data);
     try{
       const response=await axios.put(`${BASE_URL}/student/update-status`,data).then(res => res);
-      console.log(response);
       await deleteEntry(data);
       // console.log("delete")
     }
@@ -94,16 +91,6 @@ useEffect(()=>{
 
   return (
     <div className='advisor-dashboard'>
-      {/* <div className='inner-body'>
-        <div>
-            <p>Requested from Suganth.B {"(622521104054)---[IV-CSE]"}</p>
-        </div>
-        <div>
-              <HiOutlineXMark className='icon'/>
-              <IoCheckmarkOutline className='icon'/>
-        </div>
-      </div> */}
-
       {
         advisorDetail && advisorDetail.length>0 ?
         advisorDetail.map((data,index)=>(

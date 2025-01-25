@@ -20,7 +20,7 @@ const LoginHOD = () => {
         try{
             const response=await axios.get(`${BASE_URL}/hod`).then(res => res);
             setData(response.data);
-            console.log(response.data)
+
         }
         catch(err){
             console.log(err);

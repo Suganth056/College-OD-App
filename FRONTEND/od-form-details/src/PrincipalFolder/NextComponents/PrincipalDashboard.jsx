@@ -19,7 +19,7 @@ const PrincipalDashboard = () => {
   const fetchData=async()=>{
     try{
       const response=await axios.post(`${BASE_URL}/principal/get-od-data`,{user_id}).then(res => res);
-      console.log(response);
+
       setData(response.data);
     }
     catch(err){
@@ -28,12 +28,12 @@ const PrincipalDashboard = () => {
   }
 
   const nextPage=(data)=>{
-    console.log(data);
+
     dispatch(modifydetail_obj(data));
     nav('/principal-dashboard/dashboard/innerDetail')
   }
   const deleteEntry=async(data)=>{
-    console.log(" Entry",data);
+
       try{
         const deleteResponse=await axios.delete(`${BASE_URL}/principal/delete-req-data`,{data}).then(res => res);
         console.log("Delete Response",deleteResponse);
@@ -46,10 +46,9 @@ const PrincipalDashboard = () => {
 
   const rejected=async(data)=>{
     console.log("Rejected");
-    console.log(data);
+
     try{
       const response=await axios.put(`${BASE_URL}/student/update-status`,data).then(res => res);
-      console.log(response);
       await deleteEntry(data);
       // console.log("delete")
     }
@@ -63,7 +62,7 @@ const PrincipalDashboard = () => {
 
     try{
         const response=await axios.put(`${BASE_URL}/student/update-success`,data).then(res => res);
-        console.log(response);
+
         deleteEntry(data)
       
     }

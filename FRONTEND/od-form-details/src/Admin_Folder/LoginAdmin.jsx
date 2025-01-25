@@ -18,9 +18,8 @@ const LoginAdmin = () => {
     const fetchData=async()=>{
         try{
             let res=await axios.get(`${BASE_URL}/admin`);
-            console.log(res);
             setAdmin_data(res.data);
-            // console.log(admin_data);
+
         }
         catch(err){
             console.log("Error",err)
@@ -40,10 +39,8 @@ const LoginAdmin = () => {
         // console.log(admin_data);
         if(admin_data.length){
             const arr=admin_data.filter((adminData)=>{
-                console.log(adminData);
                 return (adminData.ID_NUM===admin_ID && adminData.pwd===admin_pwd);
              })
-             console.log("Array=",arr);
              if(arr.length){
                  dispatch(modifyObj(arr[0]));
                  dispatch(modifyName(arr[0].AdminName));

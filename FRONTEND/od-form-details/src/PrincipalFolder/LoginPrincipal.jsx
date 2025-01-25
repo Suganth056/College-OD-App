@@ -19,7 +19,6 @@ const LoginPrincipal = () => {
         try{
             const response=await axios.get(`${BASE_URL}/principal`).then(res => res);
             setData(response.data);
-            console.log(response.data)
         }
         catch(err){
             console.log(err);

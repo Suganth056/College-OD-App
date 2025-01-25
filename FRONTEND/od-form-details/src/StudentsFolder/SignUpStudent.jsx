@@ -29,8 +29,6 @@ const SignUpStudent = () => {
         try{
           let response=await axios.get(`${BASE_URL}/student`).then(res =>res);
 
-          console.log(response)
-
           setDetail(response.data);
         }
         catch(err){
@@ -40,10 +38,10 @@ const SignUpStudent = () => {
 
 
     const postData=async(obj)=>{
-        console.log(obj);
+
         try{
           const postRes=await axios.put(`${BASE_URL}/student/postData`,obj).then(res => res);
-          console.log(postRes)
+
           nav('/');
         }
         catch(err){
