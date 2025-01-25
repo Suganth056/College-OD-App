@@ -74,7 +74,7 @@ function App() {
 
   const router=createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<LayoutRoot />}>
+      <Route path='/*' element={<LayoutRoot />}>
         <Route index element={<SideNavBar />}/>
         <Route path='studaccountcreation' element={<SignUpStudent />} />
         <Route path='advisorlogin' element={<AdvisorLogin />} />
@@ -86,7 +86,7 @@ function App() {
         <Route path='adminlogin' element={<LoginAdmin />}/>
         <Route path='adminsignup' element={<SignUpAdmin />}/>
 
-        <Route path='student-dashboard/' element={<RootStudent />}>
+        <Route path='student-dashboard/*' element={<RootStudent />}>
           <Route path='dashboard' element={<StudentDashBoard/>} />
           <Route path='od-req-det/*' element={<StudentInnerRoot />}>
               <Route index element={<StudentReqPage />}/>
